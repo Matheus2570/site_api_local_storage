@@ -64,6 +64,10 @@ function SeletorDePais() {
         ))}
       </select>
 
+<img src={paisSelecionado?.bandeira} 
+alt={paisSelecionado?.nome}/>
+
+
       <button onClick={salvarPais} disabled={!paisSelecionado}>
         Salvar no LocalStorage
       </button>
