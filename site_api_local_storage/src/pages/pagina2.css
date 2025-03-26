@@ -1,0 +1,37 @@
+.bloco-todos {
+    border: 2px solid black;
+    width: 25%;
+    margin-left: 34%;
+    text-align: center;
+    margin-top: 13%;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.3s ease, transform 0.3s ease, 0.3s ease;
+    box-shadow: 2px 2px solid black;
+    padding: 2%;
+}
+
+.bloco-todos:hover {
+  transform: scale(1.03);
+}
+
+.bloco1 {
+    background-color: rgba(149, 145, 141, 0.468);
+    width: 25%;
+    border-radius: 5px;
+    margin-left: 36%;
+}
+
+.bloco2 {
+    background-color: rgba(149, 145, 141, 0.468);
+    width: 25%;
+    border-radius: 5px;
+    margin-left: 36%;
+}
+
+.bloco3 {
+    background-color: rgba(149, 145, 141, 0.468);
+    width: 25%;
+    border-radius: 5px;
+    margin-left: 36%;
+}
