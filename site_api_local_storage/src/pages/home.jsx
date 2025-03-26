@@ -12,17 +12,19 @@ function SeletorDePais() {
 
         // Formata os dados necessários
         const paisesFormatados = dados.map((pais) => ({
-          nome: pais.name.common,
-          nomeOficial: pais.name.official,
-          capital: pais.capital ? pais.capital[0] : "Sem capital",
-          lingua: pais.languages   ? (pais.languages) : "Desconhecida",
-          moeda: pais.currencies  ? (pais.currencies)   : "Sem moeda oficial",
-          populacao: pais.population  ? pais.population.toLocaleString() : "Desconhecida",
-          continente: pais.continents ? pais.continents[0] : "Desconhecido",
+          nome: pais.name?.common || "Sem nome",
+          nomeOficial: pais.name?.official || "Sem nome oficial",
+          capital: pais.capital?.join(", ") || "Sem capital",
+          lingua: pais.languages ? Object.values(pais.languages).join(", ") : "Desconhecida",
+          moeda: pais.currencies 
+            ? Object.values(pais.currencies).map(m => m.name).join(", ") 
+            : "Sem moeda oficial",
+          populacao: pais.population || "Desconhecida",
+          continente: pais.continents?.join(", ") || "Desconhecido",
           regiao: pais.region || "Desconhecida",
           status: pais.independent ? "Independente" : "Não independente",
-          bandeira: pais.flags.png,
-          maps: pais.maps.googleMaps,
+          bandeira: pais.flags?.png || "Sem bandeira",
+          maps: pais.maps?.googleMaps || "Sem mapa",
         }));
 
         // Ordena os países por nome
@@ -52,7 +54,7 @@ function SeletorDePais() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div>
       <h2>Selecione um país:</h2>
 
       <select onChange={handleSelecionarPais}>
