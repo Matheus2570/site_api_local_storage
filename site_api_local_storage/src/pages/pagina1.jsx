@@ -22,13 +22,13 @@ function Pagina1() {
         <h2 className="titulo">Detalhes do País</h2>
       <p><strong>Nome Oficial:</strong> {paises.nomeOficial}</p>
       <p><strong>Mapa:</strong></p>
-<a href={paises.maps} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block" }}>
+<a href={paises.maps} target="_blank"  style={{ display: "inline-block" }}>
   <iframe 
     src={paises.maps.replace("https://goo.gl/maps/", "https://www.google.com/maps/embed?pb=")}
     width="300"
     height="200"
     style={{ border: "1px solid #ccc", borderRadius: "8px", marginTop: "10px", pointerEvents: "none" }}
-    loading="lazy"
+
   ></iframe>
 </a>
 
