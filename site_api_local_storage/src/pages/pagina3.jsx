@@ -42,3 +42,5 @@ useEffect(() => {
     </div> 
   ); 
 } 
+
+export default Pagina3;
