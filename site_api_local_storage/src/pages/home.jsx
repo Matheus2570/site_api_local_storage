@@ -15,9 +15,7 @@ function SeletorDePais() {
         const paisesFormatados = dados.map((pais) => ({
           nome: pais.name?.common || "Sem nome",
           capital: pais.capital?.join(", ") || "Sem capital",
-          moeda: pais.currencies
-            ? Object.values(pais.currencies).map((m) => m.name).join(", ")
-            : "Sem moeda oficial",
+          moeda: pais.currencies  ? Object.values(pais.currencies).map((m) => m.name).join(", ")  : "Sem moeda oficial",
           populacao: pais.population || "Desconhecida",
           continente: pais.continents?.join(", ") || "Desconhecido",
           bandeira: pais.flags?.png || "Sem bandeira",
