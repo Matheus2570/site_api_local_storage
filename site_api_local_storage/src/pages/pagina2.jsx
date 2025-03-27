@@ -36,6 +36,8 @@ function Pagina2() {
                     </p>
                 </div>
             </div>
+      <p style={{color: "black", fontSize: "1.2em", position: "fixed", top: "93%", right: "1%"}}>Feito por Laura e Ana</p>
+
         </center>
     );
 }

@@ -41,6 +41,7 @@ function Pagina1() {
       />  
         </div>
       </div>
+      <p style={{color: "black", fontSize: "1.2em", position: "fixed", top: "93%", right: "1%"}}>Feito por Maria</p>
     </div>
   );
 }

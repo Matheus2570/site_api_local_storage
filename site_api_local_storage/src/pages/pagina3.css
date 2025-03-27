@@ -1,7 +1,4 @@
-body {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-}
+
 
 .container1 {
     max-width: 35%;
@@ -12,11 +9,11 @@ body {
     border-radius: 2%;
     color: #92defc;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1.3em;
 }
 
-.informacoes p {
+.informacoes-p {
     font-size: 1.1em;
     color: #ffffff;
     margin-bottom: 5%;
@@ -25,6 +22,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-strong {
+.strong {
     color: #98a176;
 }

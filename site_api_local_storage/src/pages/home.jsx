@@ -91,6 +91,8 @@ function SeletorDePais() {
       <button className="botao" onClick={salvarPais} disabled={!paisSelecionado}>
         Salvar no LocalStorage
       </button>
+      <p style={{color: "black", fontSize: "1.2em", position: "fixed", top: "93%", right: "1%"}}>Feito por Matheus</p>
+
     </div>
   );
 }
