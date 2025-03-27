@@ -17,10 +17,15 @@
   transform: scale(1.03);
 }
 
-h2, p {
+.bloco-todos p{
     color:rgb(34, 85, 188);
     width: 60%;
     margin-top: 2%;
+}
+
+.bloco-todos h2{
+    color:rgb(34, 85, 188);
+
 }
 
 

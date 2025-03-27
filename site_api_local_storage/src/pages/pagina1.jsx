@@ -21,7 +21,7 @@ function Pagina1() {
         <div className="card">
         <h2 className="titulo">Detalhes do País</h2>
       <p><strong>Nome Oficial:</strong> {paises.nomeOficial}</p>
-      <p><strong>Mapa:</strong> {paises.maps}</p>
+      <p><strong>Mapa:</strong> <a href={paises.maps} target="_blank" rel="noopener noreferrer">{paises.nome}</a></p>
       <p><strong>Status:</strong> {paises.status}</p>
       <p><strong>Bandeira:</strong></p>
 <img 
