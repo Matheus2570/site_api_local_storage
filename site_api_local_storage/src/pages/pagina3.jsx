@@ -37,7 +37,7 @@ useEffect(() => {
       <p className="informacoes-p"> 
         <strong>Região:</strong> {paisSelecionado.regiao} 
       </p> 
-      <p style={{color: "black", fontSize: "0.8em", position: "fixed", top: "93%", right: "1%"}}>Feito por Vitor e Valentina</p>
+      <p style={{color: "black", fontSize: "0.9em", position: "fixed", top: "93%", right: "1%"}}>Feito por Vitor e Valentina</p>
 
     </div> 
   ); 
