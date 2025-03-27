@@ -1,37 +1,45 @@
+
+
 .bloco-todos {
-    border: 2px solid black;
-    width: 25%;
-    margin-left: 34%;
-    text-align: center;
-    margin-top: 13%;
-    justify-content: space-between;
-    flex-direction: column;
-    transition: 0.3s ease, transform 0.3s ease, 0.3s ease;
-    box-shadow: 2px 2px solid black;
+    margin-top: 5%;
+    border: 2px solid rgb(16, 30, 65);
+    width: 40%;
+    height: auto;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgb(70, 62, 115);
     padding: 2%;
+    font-size: 1.2em;
+
 }
 
 .bloco-todos:hover {
   transform: scale(1.03);
 }
 
-.bloco1 {
-    background-color: rgba(149, 145, 141, 0.468);
-    width: 25%;
-    border-radius: 5px;
-    margin-left: 36%;
+h2, p {
+    color:rgb(34, 85, 188);
+    width: 60%;
+    margin-top: 2%;
 }
 
-.bloco2 {
+
+
+.bloco1, .bloco2, .bloco3 {
     background-color: rgba(149, 145, 141, 0.468);
-    width: 25%;
-    border-radius: 5px;
-    margin-left: 36%;
+    border-radius: 6px;
+    transition:background 0.4s ease-in-out;
+    padding: 3%;
+    box-shadow: 0 0 7px rgb(70, 62, 115);
+    margin-bottom: 20px;
 }
 
-.bloco3 {
-    background-color: rgba(149, 145, 141, 0.468);
-    width: 25%;
-    border-radius: 5px;
-    margin-left: 36%;
+.bloco1:hover, .bloco2:hover, .bloco3:hover{
+    background-color:  rgba(71, 63, 56, 0.395);
+}
+
+.teste{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

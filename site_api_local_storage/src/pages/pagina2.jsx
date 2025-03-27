@@ -1,29 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./pagina2.css"
 
 function Pagina2() {
-    const [lingua] = useState(() => JSON.parse(localStorage.getItem("lingua")) || "")
-    const [moeda] = useState(() => JSON.parse(localStorage.getItem("moeda")) || "")
-    const [populacao] = useState(() => JSON.parse(localStorage.getItem("populacao")) || "")
+    const [pais, setPais] = useState(null);
 
+    useEffect(() => {
+        const paisSalvo = localStorage.getItem("paisSelecionado");
+        if (paisSalvo) {
+            setPais(JSON.parse(paisSalvo));
+        }
+    }, []);
 
-return (
-    <div className="bloco-todos">
-    <section className="bloco1">
-        <h3>Língua</h3>
-        <p>{lingua}</p>
-    </section>
+    if (!pais) {
+        return (
+            <center>
+                <p>Carregando dados...</p>
+            </center>
+        );
+    }
 
-<section className="bloco2">
-<h3>Moeda</h3>
-<p>{moeda}</p>
-</section>
-
-<section className="bloco3">
-        <h3>População</h3>
-        <p>{populacao}</p>
-    </section>
-    </div>
-)
+    return (
+        <center>
+            <div className="bloco-todos">
+                <h2>Detalhes do País:</h2>
+                <hr />
+                <div className="teste">
+                    <p className="bloco1">
+                        <strong>Lingua:</strong> {pais.lingua || "Desconhecido"}
+                    </p>
+                    <p className="bloco2">
+                        <strong>Moeda:</strong> {pais.moeda || "Desconhecida"}
+                    </p>
+                    <p className="bloco3">
+                        <strong>População:</strong> {pais.populacao || "Desconhecida"}
+                    </p>
+                </div>
+            </div>
+        </center>
+    );
 }
-export default Pagina2
+
+export default Pagina2;
