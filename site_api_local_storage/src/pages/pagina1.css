@@ -18,7 +18,7 @@
   
 
   .card {
-    margin-top: 8%;
+    margin-top: 3%;
     background: white;
     padding: 2.5vw;
 
@@ -40,6 +40,13 @@ transition: transform 0.3s ease-in-out;
   }
   
 .card p{
-    margin-top: 5%;
-    font-size: 1.1em;
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-top: 3%;
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }

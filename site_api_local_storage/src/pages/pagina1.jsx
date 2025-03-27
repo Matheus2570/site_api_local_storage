@@ -23,6 +23,12 @@ function Pagina1() {
       <p><strong>Nome Oficial:</strong> {paises.nomeOficial}</p>
       <p><strong>Capital:</strong> {paises.capital}</p>
       <p><strong>Língua:</strong> {paises.lingua}</p>
+      <p><strong>Bandeira:</strong></p>
+<img 
+        src={paises.bandeira} 
+        alt={`Bandeira de ${paises.nomeOficial || "país desconhecido"}`} 
+        style={{ width: "200px", border: "1px solid #ccc", borderRadius: "8px" }} 
+      />  
         </div>
       </div>
     </div>
