@@ -25,4 +25,7 @@ O projeto está organizado da seguinte forma:
 - Local Storage para persistência de dados
 - Componentização para melhor organização do código
 
+## 🚀 Como visualizar
+```bash
+https://site-api-local-storage.vercel.app/
 
