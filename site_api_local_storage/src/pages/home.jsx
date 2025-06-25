@@ -8,7 +8,7 @@ function SeletorDePais() {
   useEffect(() => {
     const buscarPaises = async () => {
       try {
-        const resposta = await fetch("https://restcountries.com/v3.1/all");
+        const resposta = await fetch("https://restcountries.com/v3.1/independent?status=true");
         const dados = await resposta.json();
 
         // Formata os dados dos países
@@ -16,7 +16,7 @@ function SeletorDePais() {
           nome: pais.name?.common || "Sem nome",
           nomeOficial: pais.name?.official || "Sem nome oficial",
           capital: pais.capital ? pais.capital[0] : "Sem capital",
-          lingua: pais.languages? Object.values(pais.languages).join(", ")  : "Desconhecida",     
+          lingua: pais.languages ? Object.values(pais.languages).join(", ") : "Desconhecida",     
           moeda: pais.currencies ? Object.values(pais.currencies).map((m) => m.name).join(", ") : "Sem moeda oficial",           
           populacao: pais.population ? pais.population.toLocaleString() : "Desconhecida",
           continente: pais.continents ? pais.continents[0] : "Desconhecido",
@@ -25,24 +25,6 @@ function SeletorDePais() {
           bandeira: pais.flags?.png || "Sem bandeira",
           maps: pais.maps?.googleMaps || "Sem link para o mapa"
         }));
-
- // Object.values() extrai todos os valores de um objeto e retorna em um array. 
-
-
-// Para o exemplo:
-// pais.currencies = { 
-// USD: { name: "Dollar" }, 
-// EUR: { name: "Euro" } 
-// }
-// Object.values(pais.currencies) 
-// retorna: [{ name: "Dollar" }, { name: "Euro" }]
-
-
-// pais.languages = { eng: "English", spa: "Spanish" }
-// Object.values(pais.languages) retorna: ["English", "Spanish"]
-
-// 'join' junta elementos de um array em uma string, separando com o que for especificado (ex: vírgula)
-// 'name?.official' acessa o nome oficial de um país de forma segura, retornando undefined se não existir
 
         // Ordena os países por ordem alfabética
         setPaises(paisesFormatados.sort((a, b) => a.nome.localeCompare(b.nome)));
@@ -87,12 +69,13 @@ function SeletorDePais() {
         </div>
       )}
 
-
       <button className="botao" onClick={salvarPais} disabled={!paisSelecionado}>
         Salvar no LocalStorage
       </button>
-      <p style={{color: "black", fontSize: "1.2em", position: "fixed", top: "93%", right: "1%"}}>Feito por Matheus</p>
 
+      <p style={{color: "black", fontSize: "1.2em", position: "fixed", top: "93%", right: "1%"}}>
+        Feito por Matheus
+      </p>
     </div>
   );
 }
